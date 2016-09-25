@@ -1,4 +1,13 @@
 // Includes the FS package for reading and writing files 
+var Twitter = require('twitter');
+		var keys = require('./keys.js');
+		var twitterKeys = keys.twitterKeys;
+//		console.log("twitter keys: ",twitterKeys);
+
+
+
+
+
 function liriBot() {
 
 	// Set up logging to the console and to a file
@@ -54,16 +63,14 @@ console.log = function () {
 	}
 
 	function myTweets(){
-		var Twitter = require('twitter');
-//		var keys = require('./keys.js');
-		 
-//		var twitterKeys = keys.twitterKeys;
+//		var Twitter = require('twitter');
+
 
 		var client = new Twitter({
-			consumer_key: 'GmX5IxBOhNhxEZhTkqOoNe6WR',
-			consumer_secret: 'OGOnXTtRHX09eIirbYnq9k6GvYJEokbz5E6liLCjbXNDhog2qf',
-			access_token_key: '148152554-Ly1P6Gle0h08fepi765Bxs9dCLmv4b98LeA5f3Dy',
-			access_token_secret: 'oyAD1COGK29PhyPkso1eiAnkrdWB3eKgsmqFAHZSqRSmR'
+			consumer_key: twitterKeys.consumer_key,
+			consumer_secret: twitterKeys.consumer_secret,
+			access_token_key: twitterKeys.access_token_key,
+			access_token_secret: twitterKeys.access_token_secret
 		});
 
 		var params = {screen_name: '@marymiller19540'};

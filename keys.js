@@ -1,6 +1,6 @@
 console.log('this is loaded');
 
-exports.twitterKeyes = {
+exports.twitterKeys = {
 
 consumer_key:        'GmX5IxBOhNhxEZhTkqOoNe6WR',
 
